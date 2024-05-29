@@ -3,24 +3,42 @@ import Image from 'next/image'
 import mypic from '/public/mypic.jpg'
 import { FaRegSmileBeam, FaVideo } from 'react-icons/fa'
 import { MdOutlinePhotoLibrary } from 'react-icons/md'
+import { FaCirclePlus } from 'react-icons/fa6'
 
 
 function Middle() {
   return (
     <div className = "flex flex-col p-3  ">
         <div className = "flex [&>*]:mx-1 mb-2 overflow-hidden">
-          <div className = " min-w-36  h-60 border rounded-lg bg-white">
-
+          <div className = "flex flex-col min-w-36  h-60 border rounded-lg bg-white">
+              <div className = "relative w-full h-4/5 bg-cover bg-center border rounded-lg"
+              style = {{backgroundImage: `url('/mypic.jpg')`}}>
+              {/* <Image src={mypic} alt="profile picture" className=' h-full'/> */}
+                  <div className=" flex absolute items-center justify-center text-blue-500 text-4xl -bottom-5 left-0 right-0 ml-auto mr-auto rounded-full bg-white h-11 w-11  ">
+                  <FaCirclePlus />
+                  </div>
+              </div>
+              <span className = "mt-5 text-sm flex self-center">Create story</span>
           </div>
           <div className = " min-w-36  h-60 border rounded-lg bg-white">
+              <div className="bg-center bg-cover h-full border rounded-lg"
+              style = {{backgroundImage: `url('/vini.jpg')`}}>
 
+              </div>
           </div>
           <div className = " min-w-36  h-60 border rounded-lg bg-white">
+              <div className=" bg-center bg-cover h-full border rounded-lg"
+              style = {{backgroundImage: `url('/kane.jpg')`}}>
 
+              </div>
           </div>
-          <div className = " min-w-36  h-60 border rounded-lg bg-white">
+          <div className = " min-w-36  h-60 border rounded-lg text-white">
+              <div className="relative bg-center bg-cover h-full border rounded-lg text-white"
+              style = {{backgroundImage: `url('/harvey.jpg')`}}>
+              <p className=' absolute bottom-0 left-0 right-0 text-center text-sm'>Steve Harvey</p>
+              </div>
+          </div>
 
-          </div>
           <div className = " min-w-36  h-60 border rounded-lg bg-white">
 
           </div>

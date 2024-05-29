@@ -4,12 +4,17 @@ import { FaBookmark, FaBusinessTime, FaRegBookmark, FaUserFriends } from 'react-
 import { MdOndemandVideo, MdOutlineGroups, MdOutlineKeyboardArrowDown } from 'react-icons/md';
 import { RiMemoriesFill } from 'react-icons/ri';
 import { RxAvatar } from 'react-icons/rx';
+import Image from 'next/image'
+import mypic from '/public/mypic.jpg'
 
 function Left() {
   return (
     <div className = " flex flex-col p-3 [&>*]:flex-1 top-16 bottom-0 fixed overflow-y-auto overflow-x-hidden">
         <div className = "flex items-center">
-         <RxAvatar />
+        <div className=' w-fit h-fit rounded-full'>
+              <Image src={mypic} alt="profile picture" className=' w-7 rounded-full'/>
+
+              </div>
          <p className='px-2'>Brian Chebegwen</p>
         </div>
         <div className = "flex items-center">
