@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import facebook from "/public/facebook.png";
+import mypic from '/public/mypic.jpg'
 import { CiHome, CiShop } from "react-icons/ci";
 import { MdOndemandVideo } from "react-icons/md";
 import { RiGamepadLine } from "react-icons/ri";
@@ -14,7 +15,7 @@ function Header() {
   return (
     <div className=" sticky top-0 h-16 w-full z-50 bg-white flex place-items-center justify-items-center justify-between">
       <div className="flex place-items-center justify-items-center">
-        <Image src={facebook} alt="logo" className=" w-14" />
+        <Image src={facebook} alt="logo" className=" w-14 cursor-pointer" />
         <div className=" h-10 flex place-items-center border  bg-slate-200 rounded-full overflow-hidden p-2">
           <IoIosSearch />
           <input
@@ -26,32 +27,36 @@ function Header() {
       </div>
 
       <div className="flex text-3xl">
-        <div className=" hover:bg-slate-200 w-1/4 hover:cursor-pointer group-hover:bg-slate-200 p-2 px-10 hover:rounded-lg">
+        <div className=" hover:bg-slate-200 w-1/4 hover:cursor-pointer  p-2 px-10 hover:rounded-lg">
           <CiHome />
         </div>
-        <div className=" hover:bg-slate-200 w-1/4 hover:cursor-pointer group-hover:bg-slate-200 p-2 px-10  hover:rounded-lg">
+        <div className=" hover:bg-slate-200 w-1/4 hover:cursor-pointer  p-2 px-10  hover:rounded-lg">
           <MdOndemandVideo />
         </div>
-        <div className="hover:bg-slate-200 w-1/4 hover:cursor-pointer group-hover:bg-slate-200 p-2 px-10  hover:rounded-lg">
+        <div className="hover:bg-slate-200 w-1/4 hover:cursor-pointer  p-2 px-10  hover:rounded-lg">
           <CiShop />
         </div>
-        <div className="hover:bg-slate-200 w-1/4 hover:cursor-pointer group-hover:bg-slate-200 p-2 px-10  hover:rounded-lg">
+        <div className="hover:bg-slate-200 w-1/4 hover:cursor-pointer p-2 px-10  hover:rounded-lg">
           <RiGamepadLine />
         </div>
       </div>
 
       <div className="group flex text-2xl">
-        <div className=" group-hover:cursor-pointer flex items-center justify-center mx-1 border rounded-full bg-slate-200 w-10 h-10">
+        <div className=" group-hover:cursor-pointer hover:bg-slate-300 flex items-center justify-center mx-1 border rounded-full bg-slate-200 w-10 h-10">
           <CgMenuGridR />
         </div>
-        <div className="group-hover:cursor-pointer flex items-center justify-center border rounded-full bg-slate-200 w-10 h-10 ">
+        <div className="relative group-hover:cursor-pointer hover:bg-slate-300 flex items-center justify-center border rounded-full bg-slate-200 w-10 h-10 ">
           <FaFacebookMessenger />
+          <div className="absolute -top-3 -right-2 w-5 h-5 rounded-full bg-red-500 text-white flex place-items-center justify-center text-xs font-bold">1</div>
         </div>
-        <div className="group-hover:cursor-pointer flex items-center justify-center mx-1 border rounded-full bg-slate-200 w-10 h-10">
+        <div className="relative group-hover:cursor-pointer hover:bg-slate-300 flex items-center justify-center mx-1 border rounded-full bg-slate-200 w-10 h-10">
           <IoNotificationsSharp />
+          <div className="absolute -top-3 -right-2 w-5 h-5 rounded-full bg-red-500 text-white flex place-items-center justify-center text-xs font-bold">2</div>
+
         </div>
-        <div className=" group-hover:cursor-pointer flex items-center justify-center border rounded-full bg-slate-200 w-10 h-10 ">
-          <RxAvatar />
+        <div className=" group-hover:cursor-pointer hover:bg-slate-300 flex items-center justify-center border rounded-full w-10 h-10 ">
+        <Image src={mypic} alt="profile picture" className=' rounded-full'/>
+
         </div>
       </div>
     </div>
