@@ -92,20 +92,20 @@ function Middle() {
             </div>
             <hr className=" self-center h-px my-2 w-10/12 bg-gray-200 border-0 0"></hr>
             <div className='flex justify-evenly items-center '>
-              <div className="flex items-center px-2">
+              <div className="flex items-center p-2 hover:bg-slate-200 cursor-pointer hover:rounded">
                 <div className=' text-red-500 text-2xl'>
               <FaVideo />
                 </div>
                 <span className = "px-2">Live video</span>
               </div>
-              <div className="flex items-center">
-                <div className = "text-green-500 text-2xl">
+              <div className="flex items-center p-2 hover:bg-slate-200 cursor-pointer hover:rounded">
+                <div className = "text-green-500 text-2xl ">
 
               <MdOutlinePhotoLibrary />
                 </div>
                 <span className = "px-2">Photo/video</span>
               </div>
-              <div className="flex items-center px-2">
+              <div className="flex items-center p-2 hover:bg-slate-200 cursor-pointer hover:rounded">
                 <div className=" text-yellow-500 text-2xl">
 
               <FaRegSmileBeam />
