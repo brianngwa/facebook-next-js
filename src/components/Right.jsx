@@ -46,9 +46,9 @@ function Right() {
         <hr className = " border" />
         <div className=' flex justify-between text-gray-500 p-2'>
             <p className = "">Contacts</p>
-            <div className = "flex">
+            <div className = "flex items-center">
             <IoIosSearch />
-                <p>...</p>
+                <p className = "px-2">...</p>
             </div>
         </div>
         <div className="flex p-2 items-center hover:bg-slate-200 hover:rounded hover:cursor-pointer ">
