@@ -16,7 +16,7 @@ function Header() {
     <div className=" sticky top-0 h-16 w-full z-50 bg-white flex place-items-center justify-items-center justify-between">
       <div className="flex place-items-center justify-items-center">
         <Image src={facebook} alt="logo" className=" w-14 cursor-pointer" />
-        <div className=" h-10 flex place-items-center border  bg-slate-200 rounded-full overflow-hidden p-2">
+        <div className=" h-10 flex place-items-center border  bg-slate-100 rounded-full overflow-hidden p-2">
           <IoIosSearch />
           <input
             type="text"
