@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import Image from "next/image";
 import facebook from "/public/facebook.png";
@@ -10,8 +11,10 @@ import { FaFacebookMessenger } from "react-icons/fa";
 import { IoNotificationsSharp } from "react-icons/io5";
 import { RxAvatar } from "react-icons/rx";
 import { IoIosSearch } from "react-icons/io";
+import { useRouter } from "next/router";
 
 function Header() {
+  const router = useRouter();
   return (
     <div className=" sticky top-0 h-16 w-full z-50 bg-white flex place-items-center justify-items-center justify-between">
       <div className="flex place-items-center justify-items-center">
@@ -36,7 +39,7 @@ function Header() {
         <div className="hover:bg-slate-200 w-1/4 hover:cursor-pointer  p-2 px-10  hover:rounded-lg">
           <CiShop />
         </div>
-        <div className="hover:bg-slate-200 w-1/4 hover:cursor-pointer p-2 px-10  hover:rounded-lg">
+        <div className="hover:bg-slate-200 w-1/4 hover:cursor-pointer p-2 px-10  hover:rounded-lg" onClick={() => router.push('/Vic')}>
           <RiGamepadLine />
         </div>
       </div>
