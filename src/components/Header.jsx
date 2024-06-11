@@ -1,5 +1,5 @@
 'use client'
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import facebook from "/public/facebook.png";
 import mypic from '/public/mypic.jpg'
@@ -11,10 +11,27 @@ import { FaFacebookMessenger } from "react-icons/fa";
 import { IoNotificationsSharp } from "react-icons/io5";
 import { RxAvatar } from "react-icons/rx";
 import { IoIosSearch } from "react-icons/io";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 function Header() {
   const router = useRouter();
+  const [homeClick, setHomeClick] = useState ("hover:bg-slate-200 hover:rounded-lg ");
+  const [vidClick, setVidClick] = useState ("hover:bg-slate-200  hover:rounded-lg")
+
+  function homeClicked() {
+    useEffect(()=>setHomeClick("text-blue-500 border-b-blue-500 "), [router])
+    router.push('/')
+    setVidClick("hover:bg-slate-200 hover:rounded-lg")
+  }
+
+  function vidClicked () {
+    useEffect(() => setVidClick("text-blue-500 border-b-blue-500 "), [router])
+    router.push('/Vid')
+    setHomeClick("hover:bg-slate-200 hover:rounded-lg")
+
+  }
+  
+
   return (
     <div className=" sticky top-0 h-16 w-full z-50 bg-white flex place-items-center justify-items-center justify-between">
       <div className="flex place-items-center justify-items-center">
@@ -30,16 +47,16 @@ function Header() {
       </div>
 
       <div className="flex text-3xl">
-        <div className=" hover:bg-slate-200 w-1/4 hover:cursor-pointer  p-2 px-10 hover:rounded-lg">
+        <div className={`w-1/4 hover:cursor-pointer  p-2 px-10 ${homeClick}`} onClick={homeClicked}>
           <CiHome />
         </div>
-        <div className=" hover:bg-slate-200 w-1/4 hover:cursor-pointer  p-2 px-10  hover:rounded-lg">
+        <div className= {`w-1/4 hover:cursor-pointer  p-2 px-10 ${vidClick}`} onClick={vidClicked}>
           <MdOndemandVideo />
         </div>
         <div className="hover:bg-slate-200 w-1/4 hover:cursor-pointer  p-2 px-10  hover:rounded-lg">
           <CiShop />
         </div>
-        <div className="hover:bg-slate-200 w-1/4 hover:cursor-pointer p-2 px-10  hover:rounded-lg" onClick={() => router.push('/Vic')}>
+        <div className="hover:bg-slate-200 w-1/4 hover:cursor-pointer p-2 px-10  hover:rounded-lg" >
           <RiGamepadLine />
         </div>
       </div>
