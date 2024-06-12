@@ -17,19 +17,27 @@ function Header() {
   const router = useRouter();
   const [homeClick, setHomeClick] = useState ("hover:bg-slate-200 hover:rounded-lg ");
   const [vidClick, setVidClick] = useState ("hover:bg-slate-200  hover:rounded-lg")
-
-  function homeClicked() {
-    useEffect(()=>setHomeClick("text-blue-500 border-b-blue-500 "), [router])
-    router.push('/')
-    setVidClick("hover:bg-slate-200 hover:rounded-lg")
-  }
-
+  
   function vidClicked () {
-    useEffect(() => setVidClick("text-blue-500 border-b-blue-500 "), [router])
     router.push('/Vid')
-    setHomeClick("hover:bg-slate-200 hover:rounded-lg")
-
+   
   }
+    useEffect( () => {
+      setVidClick("text-blue-500 border-b-blue-500 ")
+      setHomeClick("hover:bg-slate-200 hover:rounded-lg")
+    }, [vidClick] )
+
+ 
+  function homeClicked() {
+    router.push('/')
+    
+  }
+    useEffect(() => {
+      setHomeClick("text-blue-500 border-b-blue-500 ")
+      setVidClick("hover:bg-slate-200 hover:rounded-lg")
+    }, [homeClick] )
+
+  
   
 
   return (
