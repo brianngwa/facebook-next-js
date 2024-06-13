@@ -20,24 +20,20 @@ function Header() {
   
   function vidClicked () {
     router.push('/Vid')
-   
-  }
-    useEffect( () => {
-      setVidClick("text-blue-500 border-b-blue-500 ")
-      setHomeClick("hover:bg-slate-200 hover:rounded-lg")
-    }, [vidClick] )
 
- 
+  }
+    // useEffect( () => {
+    //   // setVidClick("text-blue-500 border-b-blue-500 ")
+    //   setHomeClick("hover:bg-slate-200 hover:rounded-lg")
+    // }, [homeClick] )
+
+
   function homeClicked() {
     router.push('/')
-    
-  }
-    useEffect(() => {
-      setHomeClick("text-blue-500 border-b-blue-500 ")
-      setVidClick("hover:bg-slate-200 hover:rounded-lg")
-    }, [homeClick] )
+    // setHomeClick("text-blue-500 border-b-blue-500 ")
 
-  
+    
+   }
   
 
   return (
